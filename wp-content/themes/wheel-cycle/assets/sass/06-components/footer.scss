@@ -1,0 +1,91 @@
+// Footer
+.site-footer {
+	padding-top: 0;
+	@extend %responsive-alignwide-width;
+
+	// Increase the top vertical spacing when there is no widget area.
+	.no-widgets & {
+		margin-top: calc(2 * var(--global--spacing-vertical));
+	}
+
+	@include media(mobile-only) {
+
+		.no-widgets & {
+			margin-top: calc(3 * var(--global--spacing-vertical));
+		}
+	}
+}
+
+// Footer Branding
+.site-footer > .site-info {
+	color: var(--footer--color-text);
+	font-family: var(--footer--font-family);
+	font-size: var(--footer--font-size);
+	line-height: var(--global--line-height-body);
+
+	.site-logo {
+		.custom-logo {
+			max-width: var(--branding--footer-logo--max-width);
+			max-height: var(--branding--footer-logo--max-height);
+		}
+	}
+
+	.site-name {
+		text-transform: var(--branding--title--text-transform);
+		font-size: var(--branding--title--font-size);
+	}
+
+	.powered-by {
+		margin-top: calc(0.5 * var(--global--spacing-vertical));
+	}
+
+	@include media(desktop) {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+
+		.divider {
+			width: 100%;
+			display: flex;
+			align-items: flex-end;
+			hr {
+				border-bottom: dashed 3px var(--global--color-ocean);
+				flex-grow: 1;
+    			margin-bottom: 20px;
+			}
+			svg {
+				height: 75px;
+				width: 75px;
+				fill: var(--global--color-ocean);
+			}
+		}
+	}
+
+	a {
+		color: var(--footer--color-link);
+
+		&:link,
+		&:visited,
+		&:active {
+			color: var(--footer--color-link);
+		}
+
+		&:hover {
+			color: var(--footer--color-link-hover);
+		}
+
+		&:focus {
+			color: var(--footer--color-link-hover);
+
+			.is-dark-theme & {
+				color: var(--wp--style--color--link, var(--global--color-background));
+			}
+
+			// Change colors when the body background is white.
+			.has-background-white & {
+				color: var(--wp--style--color--link, var(--global--color-white));
+			}
+		}
+	}
+}

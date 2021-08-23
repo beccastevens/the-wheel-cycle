@@ -1,0 +1,84 @@
+
+.footer-navigation {
+	margin-top: calc(2 * var(--global--spacing-vertical));
+	margin-bottom: var(--global--spacing-vertical);
+	color: var(--footer--color-text);
+	font-size: var(--global--font-size-xs);
+	font-family: var(--footer--font-family);
+
+	@include media(desktop) {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+.footer-navigation-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	list-style: none;
+	padding-left: 0;
+
+	li {
+		display: inline;
+		padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
+
+		a {		
+			transition: transform 0.1s ease;
+			color: var(--footer--color-link);
+			text-decoration: none;
+			&::after {
+				content: '';
+				display: block;
+				width: 0px;
+				height: 3px;
+				background-color: var(--global--color-ocean);
+				transition: width .3s ease-in-out;
+			}
+
+			&:link,
+			&:visited,
+			&:active {
+				color: var(--footer--color-link);
+			}
+
+			&:hover {
+				&::after {
+					width: 100%;
+				}
+			}
+
+			&:focus {
+
+				.is-dark-theme & {
+
+					.svg-icon {
+						fill: var(--wp--style--color--link, var(--global--color-background));
+					}
+				}
+
+				// Change colors when the body background is white.
+				.has-background-white & {
+
+					.svg-icon {
+						fill: var(--wp--style--color--link, var(--global--color-white));
+					}
+				}
+			}
+		}
+
+		.svg-icon {
+			vertical-align: middle;
+			fill: var(--footer--color-link);
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	.sub-menu-toggle,
+	.menu-item-description {
+		display: none;
+	}
+}

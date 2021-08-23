@@ -1,0 +1,75 @@
+# Local Development
+.env
+documentation/dist
+.htaccess
+.well-known
+
+# Default WordPress Themes/Plugins
+wp-content/plugins/hello.php
+wp-content/themes/twenty*
+wp-content/plugins/akismet*
+wp-content/plugins/wp-cli-login-server
+wp-content/plugins/*
+
+# WordPress Core
+wp-admin/*
+index.php
+license.txt
+readme.html
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
+wp-config.php
+wp-cron.php
+wp-includes/
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+
+## WP Content
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/*
+wp-content/backup-db/*
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/cache/*
+wp-content/cache/supercache/*
+
+## WP_DEBBUG log
+wp-content/debug.log
+
+# wpengine specific
+.smushit-status
+.gitattributes
+_wpeprivate*
+wp-content/object-cache.php
+wp-content/mu-plugins/mu-plugin.php
+wp-content/mu-plugins/slt-force-strong-passwords.php
+wp-content/mu-plugins/stop-long-comments.php
+wp-content/mu-plugins/force-strong-passwords*
+wp-content/mu-plugins/wpengine-common*
+wp-content/mysql.sql
+
+# Vendor Dependencies
+node_modules
+
+# Operating system files
+*~
+.svn
+.cvs
+*.bak
+*.swp
+.Spotlight-V100
+.Trashes
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+.vscode

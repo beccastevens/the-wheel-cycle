@@ -1,0 +1,178 @@
+// Gutenberg text color options
+
+.has-black-color[class] {
+	// Localize CSS-variables to limit relationship scope
+	> [class*="__inner-container"] {
+		--local--color-primary: var(--global--color-black, #000000);
+		color: var(--local--color-primary);
+	}
+	color: var(--global--color-black);
+}
+
+.has-carolina-color[class] {
+	// Localize CSS-variables to limit relationship scope
+	> [class*="__inner-container"] {
+		--local--color-primary: var(--global--color-carolina, #000000);
+		color: var(--local--color-primary);
+	}
+	color: var(--global--color-carolina);
+}
+
+.has-dark-green-color[class] {
+	// Localize CSS-variables to limit relationship scope
+	> [class*="__inner-container"] {
+		--local--color-primary: var(--global--color-dark-green, #000000);
+		color: var(--local--color-primary);
+	}
+	color: var(--global--color-dark-green);
+}
+
+.has-opal-color[class] {
+	// Localize CSS-variables to limit relationship scope
+	> [class*="__inner-container"] {
+		--local--color-primary: var(--global--color-opal, #FFFFFF);
+		color: var(--local--color-primary);
+	}
+	color: var(--global--color-opal);
+}
+
+.has-bronze-color[class] {
+	// Localize CSS-variables to limit relationship scope
+	> [class*="__inner-container"] {
+		--local--color-primary: var(--global--color-bronze, #FFFFFF);
+		color: var(--local--color-primary);
+	}
+	color: var(--global--color-bronze);
+}
+
+.has-ocean-color[class] {
+	// Localize CSS-variables to limit relationship scope
+	> [class*="__inner-container"] {
+		--local--color-primary: var(--global--color-ocean, #FFFFFF);
+		color: var(--local--color-primary);
+	}
+	color: var(--global--color-ocean);
+}
+
+.has-white-color[class] {
+	// Localize CSS-variables to limit relationship scope
+	> [class*="__inner-container"] {
+		--local--color-primary: var(--global--color-white, #FFFFFF);
+		color: var(--local--color-primary);
+	}
+	color: var(--global--color-white);
+}
+
+// Gutenberg background-color options
+.has-background {
+
+	a,
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: currentColor;
+	}
+}
+
+.has-black-background-color[class] {
+	// Localize CSS-variables to limit relationship scope
+	> [class*="__inner-container"] {
+		--local--color-background: var(--global--color-black, #000000);
+		background-color: var(--local--color-background);
+	}
+	background-color: var(--global--color-black);
+}
+
+.has-dark-green-background-color[class] {
+	// Localize CSS-variables to limit relationship scope
+	> [class*="__inner-container"] {
+		--local--color-background: var(--global--color-dark-green, #000000);
+		background-color: var(--local--color-background);
+	}
+	background-color: var(--global--color-dark-green);
+}
+
+.has-carolina-background-color[class] {
+	// Localize CSS-variables to limit relationship scope
+	> [class*="__inner-container"] {
+		--local--color-background: var(--global--color-carolina, #000000);
+		background-color: var(--local--color-background);
+	}
+	background-color: var(--global--color-carolina);
+}
+
+.has-opal-background-color[class] {
+	// Localize CSS-variables to limit relationship scope
+	> [class*="__inner-container"] {
+		--local--color-background: var(--global--color-opal, #FFFFFF);
+		background-color: var(--local--color-background);
+	}
+	background-color: var(--global--color-opal);
+}
+
+.has-ocean-background-color[class] {
+	// Localize CSS-variables to limit relationship scope
+	> [class*="__inner-container"] {
+		--local--color-background: var(--global--color-ocean, #FFFFFF);
+		background-color: var(--local--color-background);
+	}
+	background-color: var(--global--color-ocean);
+}
+
+.has-bronze-background-color[class] {
+	// Localize CSS-variables to limit relationship scope
+	> [class*="__inner-container"] {
+		--local--color-background: var(--global--color-bronze, #FFFFFF);
+		background-color: var(--local--color-background);
+	}
+	background-color: var(--global--color-bronze);
+}
+
+.has-white-background-color[class] {
+	// Localize CSS-variables to limit relationship scope
+	> [class*="__inner-container"] {
+		--local--color-background: var(--global--color-white, #FFFFFF);
+		background-color: var(--local--color-background);
+	}
+	background-color: var(--global--color-white);
+}
+
+.has-background:not(.has-text-color) {
+
+	&.has-black-background-color[class],
+	&.has-carolina-background-color[class],
+	&.has-dark-green-background-color[class] {
+	  	color: var(--global--color-white);
+
+		// Localize CSS-variables to limit relationship scope
+		> [class*="__inner-container"] {
+			--local--color-primary: var(--global--color-background, #FFFFFF);
+			// Reverse the local foreground color in darkmode
+			.is-dark-theme & {
+				--local--color-primary: var(--global--color-primary, #000000);
+			}
+			color: var(--local--color-primary, var(--global--color-primary));
+		}
+	}
+
+	&.has-opal-background-color[class],
+	&.has-ocean-background-color[class],
+	&.has-bronze-background-color[class],
+	&.has-white-background-color[class] {
+	  	color: var(--global--color-dark-green);
+
+		// Localize CSS-variables to limit relationship scope
+		> [class*="__inner-container"] {
+			--local--color-primary: var(--global--color-primary, #000000);
+			// Reverse the local foreground color in darkmode
+			.is-dark-theme & {
+				--local--color-primary: var(--global--color-background, #FFFFFF);
+			}
+			color: var(--local--color-primary, var(--global--color-primary));
+		}
+	}
+}

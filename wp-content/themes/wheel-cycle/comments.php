@@ -7,69 +7,88 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package wheel-cycle
+ * @package WordPress
+ * @subpackage Twenty_Twenty_One
+ * @since Wheel Cycle 1.0
  */
 
 /*
  * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
+ * the visitor has not yet entered the password,
  * return early without loading the comments.
  */
 if ( post_password_required() ) {
 	return;
 }
+
+$twenty_twenty_one_comment_count = get_comments_number();
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area default-max-width <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
 
 	<?php
-	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
+		;
 		?>
 		<h2 class="comments-title">
-			<?php
-			$wheel_cycle_comment_count = get_comments_number();
-			if ( '1' === $wheel_cycle_comment_count ) {
+			<?php if ( '1' === $twenty_twenty_one_comment_count ) : ?>
+				<?php esc_html_e( '1 comment', 'wheelcycle' ); ?>
+			<?php else : ?>
+				<?php
 				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'wheel-cycle' ),
-					'<span>' . get_the_title() . '</span>'
+					/* translators: %s: Comment count number. */
+					esc_html( _nx( '%s comment', '%s comments', $twenty_twenty_one_comment_count, 'Comments title', 'wheelcycle' ) ),
+					esc_html( number_format_i18n( $twenty_twenty_one_comment_count ) )
 				);
-			} else {
-				printf( // WPCS: XSS OK.
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $wheel_cycle_comment_count, 'comments title', 'wheel-cycle' ) ),
-					number_format_i18n( $wheel_cycle_comment_count ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			}
-			?>
+				?>
+			<?php endif; ?>
 		</h2><!-- .comments-title -->
-
-		<?php the_comments_navigation(); ?>
 
 		<ol class="comment-list">
 			<?php
-			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
-			) );
+			wp_list_comments(
+				array(
+					'avatar_size' => 60,
+					'style'       => 'ol',
+					'short_ping'  => true,
+				)
+			);
 			?>
 		</ol><!-- .comment-list -->
 
 		<?php
-		the_comments_navigation();
+		the_comments_pagination(
+			array(
+				'before_page_number' => esc_html__( 'Page', 'wheelcycle' ) . ' ',
+				'mid_size'           => 0,
+				'prev_text'          => sprintf(
+					'%s <span class="nav-prev-text">%s</span>',
+					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ),
+					esc_html__( 'Older comments', 'wheelcycle' )
+				),
+				'next_text'          => sprintf(
+					'<span class="nav-next-text">%s</span> %s',
+					esc_html__( 'Newer comments', 'wheelcycle' ),
+					is_rtl() ? twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) : twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' )
+				),
+			)
+		);
+		?>
 
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) :
-			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'wheel-cycle' ); ?></p>
-			<?php
-		endif;
+		<?php if ( ! comments_open() ) : ?>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'wheelcycle' ); ?></p>
+		<?php endif; ?>
+	<?php endif; ?>
 
-	endif; // Check for have_comments().
-
-	comment_form();
+	<?php
+	comment_form(
+		array(
+			'logged_in_as'       => null,
+			'title_reply'        => esc_html__( 'Leave a comment', 'wheelcycle' ),
+			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
+			'title_reply_after'  => '</h2>',
+		)
+	);
 	?>
 
 </div><!-- #comments -->
