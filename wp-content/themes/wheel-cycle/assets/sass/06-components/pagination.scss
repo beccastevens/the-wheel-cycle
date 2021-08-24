@@ -80,52 +80,53 @@
 }
 
 // Singular navigation
-.post-navigation {
+.single {
+	.navigation {
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: var(--global--spacing-vertical);
+		padding-bottom: var(--global--spacing-vertical);
+		background: linear-gradient(175deg, var(--global--color-bronze), var(--global--color-ocean));
 
-	margin: var(--global--spacing-vertical) auto;
+		a {
+			color: var(--global--color-white);
+		}
 
-	@include media(desktop) {
-		margin: var(--global--spacing-vertical) auto;
-	}
-
-	@extend %responsive-alignwide-width;
-
-	.meta-nav {
-		line-height: var(--global--line-height-body);
-		color: var(--global--color-primary);
-	}
-
-	.post-title {
-		display: inline-block;
-		font-family: var(--global--font-primary);
-		font-size: var(--global--font-size-lg);
-		font-weight: var(--pagination--font-weight-strong);
-		line-height: var(--global--line-height-heading);
 		@include media(desktop) {
-			margin: 5px calc(24px + (0.25 * var(--global--spacing-unit))) 0;
-		}
-	}
-
-	.nav-links {
-		@include media(mobile) {
-			justify-content: space-between;
-		}
-	}
-
-	.nav-next,
-	.nav-previous {
-		margin-top: var(--global--spacing-vertical);
-		margin-bottom: var(--global--spacing-vertical);
-
-		&:first-child {
-			margin-top: 0;
+			margin: var(--global--spacing-vertical) auto;
 		}
 
-		&:last-child {
-			margin-bottom: 0;
+		.meta-nav {
+			line-height: var(--global--line-height-body);
+			color: var(--global--color-white);
+		}
+
+		.post-title {
+			display: inline-block;
+			font-family: var(--global--font-primary);
+			font-size: var(--global--font-size-lg);
+			font-weight: var(--pagination--font-weight-strong);
+			line-height: var(--global--line-height-heading);
+			@include media(desktop) {
+				margin: 5px calc(24px + (0.25 * var(--global--spacing-unit))) 0;
+			}
+		}
+
+		.nav-links {
+			@extend %responsive-alignwide-width;
+			@include media(mobile) {
+				justify-content: space-between;
+			}
+		}
+
+		.nav-next,
+		.nav-previous {
+			margin-top: var(--global--spacing-vertical);
+			margin-bottom: var(--global--spacing-vertical);
 		}
 	}
 }
+
 
 // Index/archive navigation
 .pagination,

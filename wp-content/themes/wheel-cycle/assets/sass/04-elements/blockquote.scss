@@ -78,4 +78,55 @@ blockquote {
 			left: 0;
 		}
 	}
+
+	&.wp-block-quote {
+		padding-left: 2em;
+		&::before {
+			font-size: 2em;
+			line-height: 1.25;
+		}
+	}
+	&.has-background-color {
+		padding: var(--global--spacing-vertical) !important;
+		padding-left: calc(2 * var(--global--spacing-vertical)) !important;
+		&::before {
+			left: calc(8px + var(--global--spacing-vertical)) !important;
+		}
+	}
+	&.has-bronze-background {
+		background-color: var(--global--color-bronze);
+		color: var(--global--color-white);
+		cite {
+			color: var(--global--color-white) !important;
+		}
+	}
+	&.has-ocean-background {
+		background-color: var(--global--color-ocean);
+		color: var(--global--color-white);
+		cite {
+			color: var(--global--color-white) !important;
+		}
+	}
+	&.has-carolina-background {
+		background-color: var(--global--color-carolina);
+		color: var(--global--color-primary);
+		cite {
+			color: var(--global--color-primary) !important;
+		}
+	}
+	&.has-dark-green-background {
+		background-color: var(--global--color-dark-green);
+		color: var(--global--color-white);
+		cite {
+			color: var(--global--color-white) !important;
+		}
+	}
+}
+.wp-block-pullquote {
+	blockquote {
+		margin-left: 0;
+		@include media(mobile-only) {
+			padding-left: 0;
+		}
+	}
 }

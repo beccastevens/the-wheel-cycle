@@ -5,8 +5,8 @@
 		value.bind( function( to ) {
 			var lum = wheelcycleGetHexLum( to ),
 				isDark = 127 > lum,
-				textColor = ! isDark ? 'var(--global--color-dark-gray)' : 'var(--global--color-light-gray)',
-				tableColor = ! isDark ? 'var(--global--color-light-gray)' : 'var(--global--color-dark-gray)',
+				textColor = ! isDark ? 'var(--global--color-dark-green)' : 'var(--global--color-opal)',
+				tableColor = ! isDark ? 'var(--global--color-opal)' : 'var(--global--color-dark-green)',
 				stylesheetID = 'wheelcycle-customizer-inline-styles',
 				stylesheet,
 				styles;
@@ -42,7 +42,7 @@
 				jQuery( '#twenty-twenty-one-style-inline-css' ).after( '<style id="' + stylesheetID + '"></style>' );
 				stylesheet = jQuery( '#' + stylesheetID );
 			}
-
+			console.log(textColor);
 			// Generate the styles.
 			styles += '--global--color-primary:' + textColor + ';';
 			styles += '--global--color-secondary:' + textColor + ';';

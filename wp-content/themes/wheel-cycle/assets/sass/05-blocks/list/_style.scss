@@ -17,19 +17,42 @@ ol {
 	}
 }
 
-ul {
-	list-style-type: disc;
-
+.entry-content {
+	ol,
 	ul {
-		list-style-type: circle;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		grid-gap: 1rem;
+
+		li {
+			display: grid;
+			grid-template-columns: 0 1fr;
+			grid-gap: 1.75em;
+			align-items: center;
+			line-height: 1.25;
+			}
 	}
-}
 
-ol {
-	list-style-type: decimal;
+	ul li::before {
+		content: url('/wp-content/themes/wheel-cycle/assets/images/wheel.svg');
+		/* Make slightly larger than the li font-size
+		but smaller than the li grid-gap */
+		font-size: 1.25em;
+	}
 
-	ul {
-		list-style-type: circle;
+	ol {
+		counter-reset: orderedlist;
+	}
+
+	ol li::before {
+		counter-increment: orderedlist;
+		content: counter(orderedlist);
+		font-family: var(--global--font-primary);
+		font-size: 1.25em;
+		line-height: 0.75;
+		color: var(--global--color-ocean);
 	}
 }
 

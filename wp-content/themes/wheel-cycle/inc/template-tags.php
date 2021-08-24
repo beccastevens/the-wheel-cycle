@@ -68,9 +68,16 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 		// Early exit if not a post.
 		if ( 'post' !== get_post_type() ) {
 			return;
-		}
+		} ?>
 
-		// Hide meta information on pages.
+		<span class="divider">
+			<svg>
+				<use href="#scooter"></use>
+			</svg>
+			<hr>
+		</span>
+
+		<?php // Hide meta information on pages.
 		if ( ! is_single() ) {
 
 			if ( is_sticky() ) {
@@ -84,17 +91,6 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 
 			// Posted on.
 			twenty_twenty_one_posted_on();
-
-			// Edit post link.
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post. Only visible to screen readers. */
-					esc_html__( 'Edit %s', 'wheelcycle' ),
-					'<span class="screen-reader-text">' . get_the_title() . '</span>'
-				),
-				'<span class="edit-link">',
-				'</span><br>'
-			);
 
 			if ( has_category() || has_tag() ) {
 
@@ -126,18 +122,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			echo '<div class="posted-by">';
 			// Posted on.
 			twenty_twenty_one_posted_on();
-			// Posted by.
-			twenty_twenty_one_posted_by();
-			// Edit post link.
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post. Only visible to screen readers. */
-					esc_html__( 'Edit %s', 'wheelcycle' ),
-					'<span class="screen-reader-text">' . get_the_title() . '</span>'
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
+
 			echo '</div>';
 
 			if ( has_category() || has_tag() ) {

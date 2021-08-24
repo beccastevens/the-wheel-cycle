@@ -93,11 +93,12 @@ Wheel Cycle is distributed under the terms of the GNU GPL.
  * Measure..............The width of a line of text, in characters.
  */
 /* Categories 01 to 03 are the basics. */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@300;400;700&display=swap");
 /* Variables */
 :root {
   /* Font Family */
-  --global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
-  --global--font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
+  --global--font-primary: var(--font-headings, "Raleway", sans-serif);
+  --global--font-secondary: var(--font-base, "Montserrat", sans-serif);
   /* Font Size */
   --global--font-size-base: 1.25rem;
   --global--font-size-xs: 1rem;
@@ -145,24 +146,20 @@ Wheel Cycle is distributed under the terms of the GNU GPL.
   --definition-term--font-family: var(--global--font-primary);
   /* Colors */
   --global--color-black: #000;
-  --global--color-dark-gray: #28303d;
-  --global--color-gray: #39414d;
-  --global--color-light-gray: #f0f0f0;
-  --global--color-green: #d1e4dd;
-  --global--color-blue: #d1dfe4;
-  --global--color-purple: #d1d1e4;
-  --global--color-red: #e4d1d1;
-  --global--color-orange: #e4dad1;
-  --global--color-yellow: #eeeadd;
+  --global--color-dark-green: #000F08;
+  --global--color-carolina: #259EE4;
+  --global--color-opal: #D9E8E0;
+  --global--color-bronze: #BB6925;
+  --global--color-ocean: #4342A4;
   --global--color-white: #fff;
   --global--color-white-50: rgba(255, 255, 255, 0.5);
   --global--color-white-90: rgba(255, 255, 255, 0.9);
-  --global--color-primary: var(--global--color-dark-gray);
+  --global--color-primary: var(--global--color-dark-green);
   /* Body text color, site title, footer text color. */
-  --global--color-secondary: var(--global--color-gray);
+  --global--color-secondary: var(--global--color-carolina);
   /* Headings */
   --global--color-primary-hover: var(--global--color-primary);
-  --global--color-background: var(--global--color-green);
+  --global--color-background: var(--global--color-opal);
   /* Mint, default body background */
   --global--color-border: var(--global--color-primary);
   /* Used for borders (separators) */
@@ -177,7 +174,7 @@ Wheel Cycle is distributed under the terms of the GNU GPL.
   --form--font-family: var(--global--font-secondary);
   --form--font-size: var(--global--font-size-sm);
   --form--line-height: var(--global--line-height-body);
-  --form--color-text: var(--global--color-dark-gray);
+  --form--color-text: var(--global--color-dark-green);
   --form--color-ranged: var(--global--color-secondary);
   --form--label-weight: 500;
   --form--border-color: var(--global--color-secondary);
@@ -203,7 +200,7 @@ Wheel Cycle is distributed under the terms of the GNU GPL.
   --button--padding-vertical: 15px;
   --button--padding-horizontal: calc(2 * var(--button--padding-vertical));
   /* entry */
-  --entry-header--color: var(--global--color-primary);
+  --entry-header--color: var(--global--color-opal);
   --entry-header--color-link: currentColor;
   --entry-header--color-hover: var(--global--color-primary-hover);
   --entry-header--color-focus: var(--global--color-secondary);
@@ -223,16 +220,18 @@ Wheel Cycle is distributed under the terms of the GNU GPL.
   --branding--description--font-family: var(--global--font-secondary);
   --branding--description--font-size: var(--global--font-size-sm);
   --branding--description--font-family: var(--global--font-secondary);
-  --branding--logo--max-width: 300px;
-  --branding--logo--max-height: 100px;
-  --branding--logo--max-width-mobile: 96px;
-  --branding--logo--max-height-mobile: 96px;
+  --branding--logo--max-width: 200px;
+  --branding--logo--max-height: 200px;
+  --branding--logo--max-width-mobile: 100px;
+  --branding--logo--max-height-mobile: 100px;
+  --branding--footer-logo--max-width: 100px;
+  --branding--footer-logo--max-height: 100px;
   /* Main navigation */
   --primary-nav--font-family: var(--global--font-secondary);
   --primary-nav--font-family-mobile: var(--global--font-primary);
-  --primary-nav--font-size: var(--global--font-size-md);
+  --primary-nav--font-size: var(--global--font-size-lg);
   --primary-nav--font-size-sub-menu: var(--global--font-size-xs);
-  --primary-nav--font-size-mobile: var(--global--font-size-sm);
+  --primary-nav--font-size-mobile: var(--global--font-size-md);
   --primary-nav--font-size-sub-menu-mobile: var(--global--font-size-sm);
   --primary-nav--font-size-button: var(--global--font-size-xs);
   --primary-nav--font-style: normal;
@@ -280,9 +279,9 @@ Wheel Cycle is distributed under the terms of the GNU GPL.
   --separator--border-color: var(--global--color-border);
   --separator--height: 1px;
   /* Block: Table */
-  --table--stripes-border-color: var(--global--color-light-gray);
-  --table--stripes-background-color: var(--global--color-light-gray);
-  --table--has-background-text-color: var(--global--color-dark-gray);
+  --table--stripes-border-color: var(--global--color-opal);
+  --table--stripes-background-color: var(--global--color-opal);
+  --table--has-background-text-color: var(--global--color-dark-green);
   /* Widgets */
   --widget--line-height-list: 1.9;
   --widget--line-height-title: 1.4;
@@ -670,7 +669,7 @@ template {
 
 @media only screen and (min-width: 482px) {
   :root {
-    --responsive--aligndefault-width: min(calc(100vw - 4 * var(--global--spacing-horizontal)), 610px);
+    --responsive--aligndefault-width: min(calc(100vw - 4 * var(--global--spacing-horizontal)), 800px);
     --responsive--alignwide-width: calc(100vw - 4 * var(--global--spacing-horizontal));
     --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
     --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
@@ -678,7 +677,7 @@ template {
 }
 @media only screen and (min-width: 822px) {
   :root {
-    --responsive--aligndefault-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 610px);
+    --responsive--aligndefault-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 800px);
     --responsive--alignwide-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 1240px);
   }
 }
@@ -747,22 +746,10 @@ template {
  */
 .site-header,
 .site-main,
-.widget-area,
 .site-footer {
   padding-top: var(--global--spacing-vertical);
-  padding-bottom: var(--global--spacing-vertical);
   margin-right: auto;
   margin-left: auto;
-}
-
-.site-header {
-  padding-top: calc(0.75 * var(--global--spacing-vertical));
-  padding-bottom: calc(2 * var(--global--spacing-vertical));
-}
-@media only screen and (min-width: 482px) {
-  .site-header {
-    padding-bottom: calc(3 * var(--global--spacing-vertical));
-  }
 }
 
 /**
@@ -1061,6 +1048,32 @@ blockquote footer {
   blockquote:before {
     right: 0;
   }
+}
+blockquote.wp-block-quote {
+  padding-right: 2em;
+}
+blockquote.wp-block-quote::before {
+  font-size: 2em;
+  line-height: 1.25;
+}
+blockquote.has-background-color {
+  padding: var(--global--spacing-vertical);
+}
+blockquote.has-bronze-background {
+  background-color: var(--global--color-bronze);
+  color: var(--global--color-white);
+}
+blockquote.has-ocean-background {
+  background-color: var(--global--color-ocean);
+  color: var(--global--color-white);
+}
+blockquote.has-carolina-background {
+  background-color: var(--global--color-carolina);
+  color: var(--global--color-primary);
+}
+blockquote.has-dark-green-background {
+  background-color: var(--global--color-dark-green);
+  color: var(--global--color-white);
 }
 
 input[type=text],
@@ -1465,6 +1478,10 @@ pre {
   overflow-x: auto;
 }
 
+.sprites {
+  display: none;
+}
+
 /*
  * text-underline-offset doesn't work in Chrome at all 👎
  * But looks nice in Safari/Firefox, so let's keep it and
@@ -1485,9 +1502,8 @@ a:hover {
 .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
   /* Only visible in Windows High Contrast mode */
   outline: 2px solid transparent;
-  text-decoration: underline 1px dotted currentColor;
-  text-decoration-skip-ink: none;
-  background: rgba(255, 255, 255, 0.9);
+  background-color: var(--global--color-carolina);
+  color: var(--global--color-white);
 }
 .is-dark-theme .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
   background: var(--global--color-black);
@@ -1495,13 +1511,6 @@ a:hover {
   text-decoration: none;
 }
 .is-dark-theme .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) .meta-nav {
-  color: var(--wp--style--color--link, var(--global--color-white));
-}
-.has-background-white .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) {
-  background: rgba(0, 0, 0, 0.9);
-  color: var(--wp--style--color--link, var(--global--color-white));
-}
-.has-background-white .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button) .meta-nav {
   color: var(--wp--style--color--link, var(--global--color-white));
 }
 .site a:focus:not(.wp-block-button__link):not(.wp-block-file__button).skip-link {
@@ -2361,18 +2370,38 @@ ol.alignright {
   padding: 0;
 }
 
-ul {
-  list-style-type: disc;
+.entry-content ol,
+.entry-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-gap: 1rem;
 }
-ul ul {
-  list-style-type: circle;
+.entry-content ol li,
+.entry-content ul li {
+  display: grid;
+  grid-template-columns: 0 1fr;
+  grid-gap: 1.75em;
+  align-items: center;
+  line-height: 1.25;
 }
-
-ol {
-  list-style-type: decimal;
+.entry-content ul li::before {
+  content: url("/wp-content/themes/wheel-cycle/assets/images/wheel.svg");
+  /* Make slightly larger than the li font-size
+  but smaller than the li grid-gap */
+  font-size: 1.25em;
 }
-ol ul {
-  list-style-type: circle;
+.entry-content ol {
+  counter-reset: orderedlist;
+}
+.entry-content ol li::before {
+  counter-increment: orderedlist;
+  content: counter(orderedlist);
+  font-family: var(--global--font-primary);
+  font-size: 1.25em;
+  line-height: 0.75;
+  color: var(--global--color-ocean);
 }
 
 dt {
@@ -2878,13 +2907,13 @@ pre.wp-block-preformatted {
   padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 }
 .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper button.wp-block-search__button:hover {
-  color: var(--global--color-dark-gray);
+  color: var(--global--color-dark-green);
 }
 .is-dark-theme .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper button.wp-block-search__button {
-  color: var(--global--color-dark-gray);
+  color: var(--global--color-dark-green);
 }
 .is-dark-theme .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper button.wp-block-search__button:hover {
-  background-color: var(--global--color-dark-gray);
+  background-color: var(--global--color-dark-green);
   color: var(--global--color-white);
 }
 .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper button.wp-block-search__button.has-icon {
@@ -3251,7 +3280,7 @@ table.wp-calendar-table caption {
 }
 @media only screen and (min-width: 822px) {
   .site-header {
-    padding-top: calc(2.4 * var(--global--spacing-vertical));
+    padding-top: var(--global--spacing-vertical);
   }
 }
 
@@ -3312,7 +3341,7 @@ table.wp-calendar-table caption {
 }
 .site-header > .site-logo {
   width: 100%;
-  padding-bottom: calc(var(--global--spacing-vertical) * 1.5);
+  padding-bottom: var(--global--spacing-vertical);
   border-bottom: 1px solid;
   text-align: center;
 }
@@ -3324,6 +3353,12 @@ table.wp-calendar-table caption {
   height: auto;
   display: inline-block;
   width: auto;
+}
+.site-logo a.custom-logo-link img {
+  transition: transform 0.6s ease-in-out;
+}
+.site-logo a.custom-logo-link:hover img {
+  transform: rotate(20deg);
 }
 @media only screen and (min-width: 482px) {
   .site-logo .custom-logo {
@@ -3386,10 +3421,9 @@ table.wp-calendar-table caption {
 }
 .site-footer {
   padding-top: 0;
-  padding-bottom: calc(1.7 * var(--global--spacing-vertical));
 }
 .no-widgets .site-footer {
-  margin-top: calc(6 * var(--global--spacing-vertical));
+  margin-top: calc(2 * var(--global--spacing-vertical));
 }
 @media only screen and (max-width: 481px) {
   .no-widgets .site-footer {
@@ -3398,12 +3432,14 @@ table.wp-calendar-table caption {
 }
 
 .site-footer > .site-info {
-  padding-top: var(--global--spacing-vertical);
   color: var(--footer--color-text);
   font-family: var(--footer--font-family);
   font-size: var(--footer--font-size);
   line-height: var(--global--line-height-body);
-  border-top: 3px solid var(--global--color-border);
+}
+.site-footer > .site-info .site-logo .custom-logo {
+  max-width: var(--branding--footer-logo--max-width);
+  max-height: var(--branding--footer-logo--max-height);
 }
 .site-footer > .site-info .site-name {
   text-transform: var(--branding--title--text-transform);
@@ -3415,11 +3451,24 @@ table.wp-calendar-table caption {
 @media only screen and (min-width: 822px) {
   .site-footer > .site-info {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
   }
-  .site-footer > .site-info .powered-by {
-    margin-top: initial;
-    margin-right: auto;
+  .site-footer > .site-info .divider {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+  .site-footer > .site-info .divider hr {
+    border-bottom: dashed 3px var(--global--color-ocean);
+    flex-grow: 1;
+    margin-bottom: 20px;
+  }
+  .site-footer > .site-info .divider svg {
+    height: 75px;
+    width: 75px;
+    fill: var(--global--color-ocean);
   }
 }
 .site-footer > .site-info a {
@@ -3442,9 +3491,11 @@ table.wp-calendar-table caption {
 }
 
 .singular .entry-header {
-  border-bottom: 3px solid var(--global--color-border);
-  padding-bottom: calc(2 * var(--global--spacing-vertical));
+  padding-top: var(--global--spacing-vertical);
+  padding-bottom: var(--global--spacing-vertical);
   margin-bottom: calc(3 * var(--global--spacing-vertical));
+  background-color: var(--global--color-ocean);
+  color: var(--global--color-opal);
 }
 
 .home .entry-header {
@@ -4246,7 +4297,16 @@ h1.page-title {
   font-size: var(--primary-nav--font-size-mobile);
   font-weight: var(--primary-nav--font-weight);
   padding: var(--primary-nav--padding) 0;
+  text-transform: uppercase;
   text-decoration: none;
+}
+.primary-navigation a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 3px;
+  background-color: var(--global--color-ocean);
+  transition: width 0.3s ease-in-out;
 }
 @media only screen and (min-width: 482px) {
   .primary-navigation a {
@@ -4262,15 +4322,13 @@ h1.page-title {
 .primary-navigation a:hover, .primary-navigation a:link, .primary-navigation a:visited {
   color: var(--primary-nav--color-link-hover);
 }
-.primary-navigation a:hover {
-  text-decoration: underline;
-  text-decoration-style: dotted;
+.primary-navigation a:hover::after {
+  width: 100%;
 }
 .primary-navigation a:focus {
   position: relative;
   z-index: 99999;
   outline-offset: 0;
-  text-decoration-thickness: 2px;
 }
 .primary-navigation .current-menu-item > a:first-child,
 .primary-navigation .current_page_item > a:first-child {
@@ -4359,6 +4417,12 @@ h1.page-title {
   font-size: var(--global--font-size-xs);
   font-family: var(--footer--font-family);
 }
+@media only screen and (min-width: 822px) {
+  .footer-navigation {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
 
 .footer-navigation-wrapper {
   display: flex;
@@ -4369,21 +4433,26 @@ h1.page-title {
 }
 .footer-navigation-wrapper li {
   display: inline;
-  line-height: 3;
+  padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
 }
 .footer-navigation-wrapper li a {
-  padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
   transition: transform 0.1s ease;
   color: var(--footer--color-link);
+  text-decoration: none;
+}
+.footer-navigation-wrapper li a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 3px;
+  background-color: var(--global--color-ocean);
+  transition: width 0.3s ease-in-out;
 }
 .footer-navigation-wrapper li a:link, .footer-navigation-wrapper li a:visited, .footer-navigation-wrapper li a:active {
   color: var(--footer--color-link);
 }
-.footer-navigation-wrapper li a:hover {
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-skip-ink: none;
-  color: var(--footer--color-link-hover);
+.footer-navigation-wrapper li a:hover::after {
+  width: 100%;
 }
 .is-dark-theme .footer-navigation-wrapper li a:focus .svg-icon {
   fill: var(--wp--style--color--link, var(--global--color-background));
@@ -4801,67 +4870,43 @@ h1.page-title {
   color: var(--local--color-primary);
 }
 
-.has-gray-color[class] {
-  color: var(--global--color-gray);
+.has-carolina-color[class] {
+  color: var(--global--color-carolina);
 }
-.has-gray-color[class] > [class*=__inner-container] {
-  --local--color-primary: var(--global--color-gray, #000000);
+.has-carolina-color[class] > [class*=__inner-container] {
+  --local--color-primary: var(--global--color-carolina, #000000);
   color: var(--local--color-primary);
 }
 
-.has-dark-gray-color[class] {
-  color: var(--global--color-dark-gray);
+.has-dark-green-color[class] {
+  color: var(--global--color-dark-green);
 }
-.has-dark-gray-color[class] > [class*=__inner-container] {
-  --local--color-primary: var(--global--color-dark-gray, #000000);
+.has-dark-green-color[class] > [class*=__inner-container] {
+  --local--color-primary: var(--global--color-dark-green, #000000);
   color: var(--local--color-primary);
 }
 
-.has-green-color[class] {
-  color: var(--global--color-green);
+.has-opal-color[class] {
+  color: var(--global--color-opal);
 }
-.has-green-color[class] > [class*=__inner-container] {
-  --local--color-primary: var(--global--color-green, #FFFFFF);
+.has-opal-color[class] > [class*=__inner-container] {
+  --local--color-primary: var(--global--color-opal, #FFFFFF);
   color: var(--local--color-primary);
 }
 
-.has-blue-color[class] {
-  color: var(--global--color-blue);
+.has-bronze-color[class] {
+  color: var(--global--color-bronze);
 }
-.has-blue-color[class] > [class*=__inner-container] {
-  --local--color-primary: var(--global--color-blue, #FFFFFF);
+.has-bronze-color[class] > [class*=__inner-container] {
+  --local--color-primary: var(--global--color-bronze, #FFFFFF);
   color: var(--local--color-primary);
 }
 
-.has-purple-color[class] {
-  color: var(--global--color-purple);
+.has-ocean-color[class] {
+  color: var(--global--color-ocean);
 }
-.has-purple-color[class] > [class*=__inner-container] {
-  --local--color-primary: var(--global--color-purple, #FFFFFF);
-  color: var(--local--color-primary);
-}
-
-.has-red-color[class] {
-  color: var(--global--color-red);
-}
-.has-red-color[class] > [class*=__inner-container] {
-  --local--color-primary: var(--global--color-red, #FFFFFF);
-  color: var(--local--color-primary);
-}
-
-.has-orange-color[class] {
-  color: var(--global--color-orange);
-}
-.has-orange-color[class] > [class*=__inner-container] {
-  --local--color-primary: var(--global--color-orange, #FFFFFF);
-  color: var(--local--color-primary);
-}
-
-.has-yellow-color[class] {
-  color: var(--global--color-yellow);
-}
-.has-yellow-color[class] > [class*=__inner-container] {
-  --local--color-primary: var(--global--color-yellow, #FFFFFF);
+.has-ocean-color[class] > [class*=__inner-container] {
+  --local--color-primary: var(--global--color-ocean, #FFFFFF);
   color: var(--local--color-primary);
 }
 
@@ -4892,75 +4937,43 @@ h1.page-title {
   background-color: var(--local--color-background);
 }
 
-.has-dark-gray-background-color[class] {
-  background-color: var(--global--color-dark-gray);
+.has-dark-green-background-color[class] {
+  background-color: var(--global--color-dark-green);
 }
-.has-dark-gray-background-color[class] > [class*=__inner-container] {
-  --local--color-background: var(--global--color-dark-gray, #000000);
+.has-dark-green-background-color[class] > [class*=__inner-container] {
+  --local--color-background: var(--global--color-dark-green, #000000);
   background-color: var(--local--color-background);
 }
 
-.has-gray-background-color[class] {
-  background-color: var(--global--color-gray);
+.has-carolina-background-color[class] {
+  background-color: var(--global--color-carolina);
 }
-.has-gray-background-color[class] > [class*=__inner-container] {
-  --local--color-background: var(--global--color-gray, #000000);
+.has-carolina-background-color[class] > [class*=__inner-container] {
+  --local--color-background: var(--global--color-carolina, #000000);
   background-color: var(--local--color-background);
 }
 
-.has-light-gray-background-color[class] {
-  background-color: var(--global--color-light-gray);
+.has-opal-background-color[class] {
+  background-color: var(--global--color-opal);
 }
-.has-light-gray-background-color[class] > [class*=__inner-container] {
-  --local--color-background: var(--global--color-light-gray, #FFFFFF);
+.has-opal-background-color[class] > [class*=__inner-container] {
+  --local--color-background: var(--global--color-opal, #FFFFFF);
   background-color: var(--local--color-background);
 }
 
-.has-green-background-color[class] {
-  background-color: var(--global--color-green);
+.has-ocean-background-color[class] {
+  background-color: var(--global--color-ocean);
 }
-.has-green-background-color[class] > [class*=__inner-container] {
-  --local--color-background: var(--global--color-green, #FFFFFF);
+.has-ocean-background-color[class] > [class*=__inner-container] {
+  --local--color-background: var(--global--color-ocean, #FFFFFF);
   background-color: var(--local--color-background);
 }
 
-.has-blue-background-color[class] {
-  background-color: var(--global--color-blue);
+.has-bronze-background-color[class] {
+  background-color: var(--global--color-bronze);
 }
-.has-blue-background-color[class] > [class*=__inner-container] {
-  --local--color-background: var(--global--color-blue, #FFFFFF);
-  background-color: var(--local--color-background);
-}
-
-.has-purple-background-color[class] {
-  background-color: var(--global--color-purple);
-}
-.has-purple-background-color[class] > [class*=__inner-container] {
-  --local--color-background: var(--global--color-purple, #FFFFFF);
-  background-color: var(--local--color-background);
-}
-
-.has-red-background-color[class] {
-  background-color: var(--global--color-red);
-}
-.has-red-background-color[class] > [class*=__inner-container] {
-  --local--color-background: var(--global--color-red, #FFFFFF);
-  background-color: var(--local--color-background);
-}
-
-.has-orange-background-color[class] {
-  background-color: var(--global--color-orange);
-}
-.has-orange-background-color[class] > [class*=__inner-container] {
-  --local--color-background: var(--global--color-orange, #FFFFFF);
-  background-color: var(--local--color-background);
-}
-
-.has-yellow-background-color[class] {
-  background-color: var(--global--color-yellow);
-}
-.has-yellow-background-color[class] > [class*=__inner-container] {
-  --local--color-background: var(--global--color-yellow, #FFFFFF);
+.has-bronze-background-color[class] > [class*=__inner-container] {
+  --local--color-background: var(--global--color-bronze, #FFFFFF);
   background-color: var(--local--color-background);
 }
 
@@ -4972,57 +4985,25 @@ h1.page-title {
   background-color: var(--local--color-background);
 }
 
-.has-background:not(.has-text-color).has-black-background-color[class], .has-background:not(.has-text-color).has-gray-background-color[class], .has-background:not(.has-text-color).has-dark-gray-background-color[class] {
+.has-background:not(.has-text-color).has-black-background-color[class], .has-background:not(.has-text-color).has-carolina-background-color[class], .has-background:not(.has-text-color).has-dark-green-background-color[class] {
   color: var(--global--color-white);
 }
-.has-background:not(.has-text-color).has-black-background-color[class] > [class*=__inner-container], .has-background:not(.has-text-color).has-gray-background-color[class] > [class*=__inner-container], .has-background:not(.has-text-color).has-dark-gray-background-color[class] > [class*=__inner-container] {
+.has-background:not(.has-text-color).has-black-background-color[class] > [class*=__inner-container], .has-background:not(.has-text-color).has-carolina-background-color[class] > [class*=__inner-container], .has-background:not(.has-text-color).has-dark-green-background-color[class] > [class*=__inner-container] {
   --local--color-primary: var(--global--color-background, #FFFFFF);
   color: var(--local--color-primary, var(--global--color-primary));
 }
-.is-dark-theme .has-background:not(.has-text-color).has-black-background-color[class] > [class*=__inner-container], .is-dark-theme .has-background:not(.has-text-color).has-gray-background-color[class] > [class*=__inner-container], .is-dark-theme .has-background:not(.has-text-color).has-dark-gray-background-color[class] > [class*=__inner-container] {
+.is-dark-theme .has-background:not(.has-text-color).has-black-background-color[class] > [class*=__inner-container], .is-dark-theme .has-background:not(.has-text-color).has-carolina-background-color[class] > [class*=__inner-container], .is-dark-theme .has-background:not(.has-text-color).has-dark-green-background-color[class] > [class*=__inner-container] {
   --local--color-primary: var(--global--color-primary, #000000);
 }
-.has-background:not(.has-text-color).has-green-background-color[class], .has-background:not(.has-text-color).has-blue-background-color[class], .has-background:not(.has-text-color).has-purple-background-color[class], .has-background:not(.has-text-color).has-red-background-color[class], .has-background:not(.has-text-color).has-orange-background-color[class], .has-background:not(.has-text-color).has-yellow-background-color[class], .has-background:not(.has-text-color).has-white-background-color[class] {
-  color: var(--global--color-dark-gray);
+.has-background:not(.has-text-color).has-opal-background-color[class], .has-background:not(.has-text-color).has-ocean-background-color[class], .has-background:not(.has-text-color).has-bronze-background-color[class], .has-background:not(.has-text-color).has-white-background-color[class] {
+  color: var(--global--color-dark-green);
 }
-.has-background:not(.has-text-color).has-green-background-color[class] > [class*=__inner-container], .has-background:not(.has-text-color).has-blue-background-color[class] > [class*=__inner-container], .has-background:not(.has-text-color).has-purple-background-color[class] > [class*=__inner-container], .has-background:not(.has-text-color).has-red-background-color[class] > [class*=__inner-container], .has-background:not(.has-text-color).has-orange-background-color[class] > [class*=__inner-container], .has-background:not(.has-text-color).has-yellow-background-color[class] > [class*=__inner-container], .has-background:not(.has-text-color).has-white-background-color[class] > [class*=__inner-container] {
+.has-background:not(.has-text-color).has-opal-background-color[class] > [class*=__inner-container], .has-background:not(.has-text-color).has-ocean-background-color[class] > [class*=__inner-container], .has-background:not(.has-text-color).has-bronze-background-color[class] > [class*=__inner-container], .has-background:not(.has-text-color).has-white-background-color[class] > [class*=__inner-container] {
   --local--color-primary: var(--global--color-primary, #000000);
   color: var(--local--color-primary, var(--global--color-primary));
 }
-.is-dark-theme .has-background:not(.has-text-color).has-green-background-color[class] > [class*=__inner-container], .is-dark-theme .has-background:not(.has-text-color).has-blue-background-color[class] > [class*=__inner-container], .is-dark-theme .has-background:not(.has-text-color).has-purple-background-color[class] > [class*=__inner-container], .is-dark-theme .has-background:not(.has-text-color).has-red-background-color[class] > [class*=__inner-container], .is-dark-theme .has-background:not(.has-text-color).has-orange-background-color[class] > [class*=__inner-container], .is-dark-theme .has-background:not(.has-text-color).has-yellow-background-color[class] > [class*=__inner-container], .is-dark-theme .has-background:not(.has-text-color).has-white-background-color[class] > [class*=__inner-container] {
+.is-dark-theme .has-background:not(.has-text-color).has-opal-background-color[class] > [class*=__inner-container], .is-dark-theme .has-background:not(.has-text-color).has-ocean-background-color[class] > [class*=__inner-container], .is-dark-theme .has-background:not(.has-text-color).has-bronze-background-color[class] > [class*=__inner-container], .is-dark-theme .has-background:not(.has-text-color).has-white-background-color[class] > [class*=__inner-container] {
   --local--color-primary: var(--global--color-background, #FFFFFF);
-}
-
-.has-purple-to-yellow-gradient-background {
-  background: linear-gradient(-160deg, var(--global--color-purple), var(--global--color-yellow));
-}
-
-.has-yellow-to-purple-gradient-background {
-  background: linear-gradient(-160deg, var(--global--color-yellow), var(--global--color-purple));
-}
-
-.has-green-to-yellow-gradient-background {
-  background: linear-gradient(-160deg, var(--global--color-green), var(--global--color-yellow));
-}
-
-.has-yellow-to-green-gradient-background {
-  background: linear-gradient(-160deg, var(--global--color-yellow), var(--global--color-green));
-}
-
-.has-red-to-yellow-gradient-background {
-  background: linear-gradient(-160deg, var(--global--color-red), var(--global--color-yellow));
-}
-
-.has-yellow-to-red-gradient-background {
-  background: linear-gradient(-160deg, var(--global--color-yellow), var(--global--color-red));
-}
-
-.has-purple-to-red-gradient-background {
-  background: linear-gradient(-160deg, var(--global--color-purple), var(--global--color-red));
-}
-
-.has-red-to-purple-gradient-background {
-  background: linear-gradient(-160deg, var(--global--color-red), var(--global--color-purple));
 }
 
 header *,

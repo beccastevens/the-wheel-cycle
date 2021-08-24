@@ -13,8 +13,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header alignwide">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<header class="entry-header alignfull">
+		<?php the_title( '<h1 class="entry-title alignwide">', '</h1>' ); ?>
 		<?php twenty_twenty_one_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 
@@ -33,7 +33,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer default-max-width">
+	<footer class="entry-footer alignwide">
 		<?php twenty_twenty_one_entry_meta_footer(); ?>
 	</footer><!-- .entry-footer -->
 

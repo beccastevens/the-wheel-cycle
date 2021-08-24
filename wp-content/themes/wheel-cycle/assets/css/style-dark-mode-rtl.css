@@ -1,8 +1,8 @@
 /* OS dark theme preference */
 @media only screen {
   .is-dark-theme.is-dark-theme {
-    --global--color-background: var(--global--color-dark-gray);
-    --global--color-primary: var(--global--color-light-gray);
+    --global--color-background: var(--global--color-dark-green);
+    --global--color-primary: var(--global--color-opal);
     --global--color-secondary: var(--global--color-light-gray);
     --button--color-text: var(--global--color-background);
     --button--color-text-hover: var(--global--color-secondary);

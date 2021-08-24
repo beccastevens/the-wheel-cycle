@@ -126,7 +126,7 @@ $baseline-unit: 10px;
 	--button--padding-horizontal: calc(2 * var(--button--padding-vertical));
 
 	/* entry */
-	--entry-header--color: var(--global--color-primary);
+	--entry-header--color: var(--global--color-opal);
 	--entry-header--color-link: currentColor;
 	--entry-header--color-hover: var(--global--color-primary-hover);
 	--entry-header--color-focus: var(--global--color-secondary);
@@ -210,7 +210,7 @@ $baseline-unit: 10px;
 	--quote--line-height: var(--global--line-height-body);
 	--quote--line-height-large: 1.35;
 
-	--separator--border-color: var(--global--color-border);
+	--separator--border-color: var(--global--color-bronze);
 	--separator--height: 1px;
 
 	/* Block: Table */

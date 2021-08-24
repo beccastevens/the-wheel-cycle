@@ -43,6 +43,7 @@ while ( have_posts() ) :
 		array(
 			'next_text' => '<p class="meta-nav">' . $wheelcycle_next_label . $wheelcycle_next . '</p><p class="post-title">%title</p>',
 			'prev_text' => '<p class="meta-nav">' . $wheelcycle_prev . $wheelcycle_previous_label . '</p><p class="post-title">%title</p>',
+			'class'		=> 'alignfull',
 		)
 	);
 endwhile; // End of the loop.

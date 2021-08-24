@@ -103,12 +103,30 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 	margin-top: calc(3.4 * var(--global--spacing-vertical));
 	margin-bottom: calc(3.4 * var(--global--spacing-vertical));
 	padding-bottom: 0;
-	padding-top: calc(0.8 * var(--global--spacing-vertical));
-	border-top: 3px solid var(--separator--border-color);
+	padding-top: 0;
 	border-bottom: var(--separator--height) solid transparent;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: calc(2 * var(--global--spacing-horizontal));
+
+	.divider {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		display: flex;
+		align-items: flex-end;
+		padding-bottom: calc(0.8 * var(--global--spacing-vertical));
+		hr {
+			border-bottom: 3px dashed var(--separator--border-color);
+			flex-grow: 1;
+			margin-bottom: 20px;
+			margin-left: 8px;
+		}
+		svg {
+			height: 75px;
+			width: 75px;
+			fill: var(--separator--border-color);
+		}
+	}
 
 	.post-taxonomies,
 	.full-size-link {

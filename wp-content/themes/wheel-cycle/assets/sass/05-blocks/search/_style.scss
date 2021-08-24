@@ -91,14 +91,14 @@
 
 				// Search button always needs black contrast against white form background
 				&:hover {
-					color: var(--global--color-dark-gray);
+					color: var(--global--color-dark-green);
 				}
 
 				.is-dark-theme & {
-					color: var(--global--color-dark-gray);
+					color: var(--global--color-dark-green);
 
 					&:hover {
-						background-color: var(--global--color-dark-gray);
+						background-color: var(--global--color-dark-green);
 						color: var(--global--color-white);
 					}
 				}
