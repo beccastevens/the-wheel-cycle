@@ -12,8 +12,11 @@ h1.page-title {
 }
 
 .page-header {
-	border-bottom: 3px solid var(--global--color-border);
-	padding-bottom: calc(2 * var(--global--spacing-vertical));
+	padding-top: var(--global--spacing-vertical);
+	padding-bottom: var(--global--spacing-vertical);
+	margin-bottom: calc(3 * var(--global--spacing-vertical));
+	background-color: var(--global--color-ocean);
+	color: var(--global--color-opal);
 }
 
 .archive,

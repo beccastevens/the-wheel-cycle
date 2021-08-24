@@ -70,13 +70,6 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 			return;
 		} ?>
 
-		<span class="divider">
-			<svg>
-				<use href="#scooter"></use>
-			</svg>
-			<hr>
-		</span>
-
 		<?php // Hide meta information on pages.
 		if ( ! is_single() ) {
 
@@ -117,9 +110,16 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 				}
 				echo '</div>';
 			}
-		} else {
+		} else { ?>
 
-			echo '<div class="posted-by">';
+			<span class="divider">
+				<svg>
+					<use href="#scooter"></use>
+				</svg>
+				<hr>
+			</span>
+
+			<?php echo '<div class="posted-by">';
 			// Posted on.
 			twenty_twenty_one_posted_on();
 

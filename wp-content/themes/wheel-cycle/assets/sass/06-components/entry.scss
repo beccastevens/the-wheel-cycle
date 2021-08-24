@@ -31,6 +31,7 @@
 h1.entry-title {
 	line-height: var(--heading--line-height-h1);
 	font-weight: var(--heading--font-weight-page-title);
+	color: var(--global--color-opal);
 }
 
 /**
@@ -120,6 +121,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 			flex-grow: 1;
 			margin-bottom: 20px;
 			margin-left: 8px;
+			margin-right: -50vw;
 		}
 		svg {
 			height: 75px;

@@ -428,12 +428,8 @@
 
 	.current-menu-item > a:first-child,
 	.current_page_item > a:first-child {
-		text-decoration: underline;
-		text-decoration-style: solid;
-
-		&:hover {
-			text-decoration: underline;
-			text-decoration-style: dotted;
+		&::after {
+			width: 100%;
 		}
 	}
 

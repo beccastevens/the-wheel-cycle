@@ -200,7 +200,7 @@ Wheel Cycle is distributed under the terms of the GNU GPL.
   --button--padding-vertical: 15px;
   --button--padding-horizontal: calc(2 * var(--button--padding-vertical));
   /* entry */
-  --entry-header--color: var(--global--color-opal);
+  --entry-header--color: var(--global--color-primary);
   --entry-header--color-link: currentColor;
   --entry-header--color-hover: var(--global--color-primary-hover);
   --entry-header--color-focus: var(--global--color-secondary);
@@ -951,6 +951,7 @@ body {
   color: var(--global--color-primary);
   text-align: left;
   background-color: var(--global--color-background);
+  overflow-x: hidden;
 }
 
 button {
@@ -1623,7 +1624,8 @@ input[type=reset]:not(:hover):not(:active):not(.has-background),
 .wp-block-search .wp-block-search__button:not(:hover):not(:active):not(.has-background),
 .wp-block-button .wp-block-button__link:not(:hover):not(:active):not(.has-background),
 .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-background) {
-  background-color: var(--global--color-primary);
+  background-color: var(--global--color-ocean);
+  transition: all 0.3s ease;
 }
 .has-background .site .button:not(:hover):not(:active):not(.has-background),
 .has-background button:not(:hover):not(:active):not(.has-background),
@@ -1648,8 +1650,8 @@ input[type=reset]:active,
 .wp-block-file a.wp-block-file__button:hover,
 .wp-block-file a.wp-block-file__button:active {
   background-color: transparent;
-  border-color: currentColor;
-  color: inherit;
+  border-color: var(--global--color-ocean);
+  color: var(--global--color-ocean);
 }
 .site .button:focus,
 button:focus,
@@ -3518,6 +3520,7 @@ table.wp-calendar-table caption {
   flex-grow: 1;
   margin-bottom: 20px;
   margin-right: 8px;
+  margin-left: -50vw;
 }
 .site-footer > .site-info .divider svg {
   height: 75px;
@@ -3624,6 +3627,7 @@ table.wp-calendar-table caption {
 h1.entry-title {
   line-height: var(--heading--line-height-h1);
   font-weight: var(--heading--font-weight-page-title);
+  color: var(--global--color-opal);
 }
 
 /**
@@ -3694,6 +3698,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
   flex-grow: 1;
   margin-bottom: 20px;
   margin-left: 8px;
+  margin-right: -50vw;
 }
 .single .site-main > article > .entry-footer .divider svg {
   height: 75px;
@@ -3788,8 +3793,11 @@ h1.page-title {
 }
 
 .page-header {
-  border-bottom: 3px solid var(--global--color-border);
-  padding-bottom: calc(2 * var(--global--spacing-vertical));
+  padding-top: var(--global--spacing-vertical);
+  padding-bottom: var(--global--spacing-vertical);
+  margin-bottom: calc(3 * var(--global--spacing-vertical));
+  background-color: var(--global--color-ocean);
+  color: var(--global--color-opal);
 }
 
 .archive .content-area .format-aside .entry-content,
@@ -4423,15 +4431,9 @@ h1.page-title {
   z-index: 99999;
   outline-offset: 0;
 }
-.primary-navigation .current-menu-item > a:first-child,
-.primary-navigation .current_page_item > a:first-child {
-  text-decoration: underline;
-  text-decoration-style: solid;
-}
-.primary-navigation .current-menu-item > a:first-child:hover,
-.primary-navigation .current_page_item > a:first-child:hover {
-  text-decoration: underline;
-  text-decoration-style: dotted;
+.primary-navigation .current-menu-item > a:first-child::after,
+.primary-navigation .current_page_item > a:first-child::after {
+  width: 100%;
 }
 .primary-navigation .sub-menu {
   margin: 0;

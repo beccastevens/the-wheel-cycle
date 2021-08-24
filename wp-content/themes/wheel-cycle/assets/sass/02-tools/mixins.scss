@@ -49,8 +49,8 @@
 
 		// Background-colors
 		&:not(.has-background) {
-			background-color: var(--global--color-primary);
-
+			background-color: var(--global--color-ocean);
+			transition: all .3s ease;
 			// Nested
 			.has-background & {
 				background-color: var(--local--color-primary, var(--global--color-primary));
@@ -62,8 +62,8 @@
 	&:hover,
 	&:active {
 		background-color: transparent;
-		border-color: currentColor;
-		color: inherit;
+		border-color: var(--global--color-ocean);
+		color: var(--global--color-ocean);
 	}
 
 	// Focus Button outline color should always match the current text color
