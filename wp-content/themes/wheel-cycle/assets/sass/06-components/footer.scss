@@ -50,10 +50,28 @@
 			margin-right: 8px;
 			margin-left: -50vw;
 		}
-		svg {
+		#bicycle {
 			height: 75px;
 			width: 75px;
 			fill: var(--global--color-ocean);
+		}
+		#bicycle #motionLine1 {
+			stroke-dasharray: 17;
+			stroke-dashoffset: 0;
+			stroke: var(--global--color-ocean);
+			animation-name: motionLine1;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		#bicycle #motionLine2 {
+			stroke-dasharray: 16;
+			stroke-dashoffset: 16;
+			stroke: var(--global--color-ocean);
+			animation-name: motionLine2;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
 		}
 	}
 
@@ -97,5 +115,32 @@
 				color: var(--wp--style--color--link, var(--global--color-white));
 			}
 		}
+	}
+}
+
+@keyframes motionLine1 {
+	0% {
+		stroke-dasharray: 17;
+		stroke-dashoffset: 34;
+	}
+	50% {
+		stroke-dasharray: 17;
+		stroke-dashoffset: 17;
+	}
+	100% {
+		stroke-dasharray: 17;
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes motionLine2 {
+	0% {
+		stroke-dashoffset: 48;
+	}
+	50% {
+		stroke-dashoffset: 32;
+	}
+	100% {
+		stroke-dashoffset: 16;
 	}
 }

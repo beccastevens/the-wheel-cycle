@@ -109,7 +109,7 @@
   --button--padding-vertical: 15px;
   --button--padding-horizontal: calc(2 * var(--button--padding-vertical));
   /* entry */
-  --entry-header--color: var(--global--color-opal);
+  --entry-header--color: var(--global--color-primary);
   --entry-header--color-link: currentColor;
   --entry-header--color-hover: var(--global--color-primary-hover);
   --entry-header--color-focus: var(--global--color-secondary);
@@ -185,7 +185,7 @@
   --quote--font-style-cite: normal;
   --quote--line-height: var(--global--line-height-body);
   --quote--line-height-large: 1.35;
-  --separator--border-color: var(--global--color-border);
+  --separator--border-color: var(--global--color-bronze);
   --separator--height: 1px;
   /* Block: Table */
   --table--stripes-border-color: var(--global--color-opal);
@@ -350,23 +350,48 @@ blockquote.wp-block-quote::before {
   line-height: 1.25;
 }
 blockquote.has-background-color {
-  padding: var(--global--spacing-vertical);
+  padding: var(--global--spacing-vertical) !important;
+  padding-left: calc(2 * var(--global--spacing-vertical)) !important;
+}
+blockquote.has-background-color::before {
+  left: calc(8px + var(--global--spacing-vertical)) !important;
 }
 blockquote.has-bronze-background {
   background-color: var(--global--color-bronze);
   color: var(--global--color-white);
 }
+blockquote.has-bronze-background cite {
+  color: var(--global--color-white) !important;
+}
 blockquote.has-ocean-background {
   background-color: var(--global--color-ocean);
   color: var(--global--color-white);
+}
+blockquote.has-ocean-background cite {
+  color: var(--global--color-white) !important;
 }
 blockquote.has-carolina-background {
   background-color: var(--global--color-carolina);
   color: var(--global--color-primary);
 }
+blockquote.has-carolina-background cite {
+  color: var(--global--color-primary) !important;
+}
 blockquote.has-dark-green-background {
   background-color: var(--global--color-dark-green);
   color: var(--global--color-white);
+}
+blockquote.has-dark-green-background cite {
+  color: var(--global--color-white) !important;
+}
+
+.wp-block-pullquote blockquote {
+  margin-left: 0;
+}
+@media only screen and (max-width: 481px) {
+  .wp-block-pullquote blockquote {
+    padding-left: 0;
+  }
 }
 
 img {
@@ -506,15 +531,16 @@ a:hover {
   color: var(--global--color-primary);
 }
 .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
-  background-color: var(--global--color-primary);
+  background-color: var(--global--color-ocean);
+  transition: all 0.3s ease;
 }
 .has-background .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
   background-color: var(--local--color-primary, var(--global--color-primary));
 }
 .wp-block-button__link:hover, .wp-block-button__link:active {
   background-color: transparent;
-  border-color: currentColor;
-  color: inherit;
+  border-color: var(--global--color-ocean);
+  color: var(--global--color-ocean);
 }
 .wp-block-button__link:focus {
   outline-offset: -6px;
@@ -806,15 +832,16 @@ a:hover {
   color: var(--global--color-primary);
 }
 .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-background) {
-  background-color: var(--global--color-primary);
+  background-color: var(--global--color-ocean);
+  transition: all 0.3s ease;
 }
 .has-background .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-background) {
   background-color: var(--local--color-primary, var(--global--color-primary));
 }
 .wp-block-file .wp-block-file__button:hover, .wp-block-file .wp-block-file__button:active {
   background-color: transparent;
-  border-color: currentColor;
-  color: inherit;
+  border-color: var(--global--color-ocean);
+  color: var(--global--color-ocean);
 }
 .wp-block-file .wp-block-file__button:focus {
   outline-offset: -6px;
@@ -1594,15 +1621,16 @@ pre.wp-block-preformatted {
   color: var(--global--color-primary);
 }
 .wp-block-search .wp-block-search__button.wp-block-search__button:not(:hover):not(:active):not(.has-background) {
-  background-color: var(--global--color-primary);
+  background-color: var(--global--color-ocean);
+  transition: all 0.3s ease;
 }
 .has-background .wp-block-search .wp-block-search__button.wp-block-search__button:not(:hover):not(:active):not(.has-background) {
   background-color: var(--local--color-primary, var(--global--color-primary));
 }
 .wp-block-search .wp-block-search__button.wp-block-search__button:hover, .wp-block-search .wp-block-search__button.wp-block-search__button:active {
   background-color: transparent;
-  border-color: currentColor;
-  color: inherit;
+  border-color: var(--global--color-ocean);
+  color: var(--global--color-ocean);
 }
 .wp-block-search .wp-block-search__button.wp-block-search__button:focus {
   outline-offset: -6px;
