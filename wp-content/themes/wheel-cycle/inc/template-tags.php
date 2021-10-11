@@ -113,9 +113,7 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
 		} else { ?>
 
 			<span class="divider">
-				<svg>
-					<use href="#scooter"></use>
-				</svg>
+				<?php require get_template_directory() . '/assets/scooter-svg.php'; ?>
 				<hr>
 			</span>
 

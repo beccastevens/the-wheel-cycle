@@ -23,9 +23,7 @@
 		<div class="site-info">
 			<span class="divider">
 				<hr>
-				<svg>
-					<use href="#bicycle"></use>
-				</svg>
+				<?php require 'assets/bicycle-svg.php'; ?>
 			</span>
 			<div class="site-name">
 				<?php if ( has_custom_logo() ) : ?>

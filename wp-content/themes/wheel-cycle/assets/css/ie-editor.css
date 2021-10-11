@@ -185,23 +185,48 @@ blockquote.wp-block-quote::before {
   line-height: 1.25;
 }
 blockquote.has-background-color {
-  padding: 30px;
+  padding: 30px !important;
+  padding-left: 60px !important;
+}
+blockquote.has-background-color::before {
+  left: 38px !important;
 }
 blockquote.has-bronze-background {
   background-color: #BB6925;
   color: #fff;
 }
+blockquote.has-bronze-background cite {
+  color: #fff !important;
+}
 blockquote.has-ocean-background {
   background-color: #4342A4;
   color: #fff;
+}
+blockquote.has-ocean-background cite {
+  color: #fff !important;
 }
 blockquote.has-carolina-background {
   background-color: #259EE4;
   color: #000F08;
 }
+blockquote.has-carolina-background cite {
+  color: #000F08 !important;
+}
 blockquote.has-dark-green-background {
   background-color: #000F08;
   color: #fff;
+}
+blockquote.has-dark-green-background cite {
+  color: #fff !important;
+}
+
+.wp-block-pullquote blockquote {
+  margin-left: 0;
+}
+@media only screen and (max-width: 481px) {
+  .wp-block-pullquote blockquote {
+    padding-left: 0;
+  }
 }
 
 img {
@@ -370,15 +395,21 @@ a:hover {
   color: #000F08;
 }
 .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
-  background-color: #000F08;
+  background-color: #4342A4;
+  transition: all 0.3s ease;
 }
 .has-background .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
   background-color: #000F08;
 }
-.wp-block-button__link:hover, .wp-block-button__link:active {
+.wp-block-button__link:hover {
   background-color: transparent;
-  border-color: currentColor;
-  color: inherit;
+  border-color: #4342A4;
+  color: #4342A4;
+}
+.wp-block-button__link:active {
+  background-color: transparent;
+  border-color: #4342A4;
+  color: #4342A4;
 }
 .wp-block-button__link:focus {
   outline-offset: -6px;
@@ -779,15 +810,21 @@ a:hover {
   color: #000F08;
 }
 .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-background) {
-  background-color: #000F08;
+  background-color: #4342A4;
+  transition: all 0.3s ease;
 }
 .has-background .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-background) {
   background-color: #000F08;
 }
-.wp-block-file .wp-block-file__button:hover, .wp-block-file .wp-block-file__button:active {
+.wp-block-file .wp-block-file__button:hover {
   background-color: transparent;
-  border-color: currentColor;
-  color: inherit;
+  border-color: #4342A4;
+  color: #4342A4;
+}
+.wp-block-file .wp-block-file__button:active {
+  background-color: transparent;
+  border-color: #4342A4;
+  color: #4342A4;
 }
 .wp-block-file .wp-block-file__button:focus {
   outline-offset: -6px;
@@ -1986,15 +2023,21 @@ pre.wp-block-preformatted {
   color: #000F08;
 }
 .wp-block-search .wp-block-search__button.wp-block-search__button:not(:hover):not(:active):not(.has-background) {
-  background-color: #000F08;
+  background-color: #4342A4;
+  transition: all 0.3s ease;
 }
 .has-background .wp-block-search .wp-block-search__button.wp-block-search__button:not(:hover):not(:active):not(.has-background) {
   background-color: #000F08;
 }
-.wp-block-search .wp-block-search__button.wp-block-search__button:hover, .wp-block-search .wp-block-search__button.wp-block-search__button:active {
+.wp-block-search .wp-block-search__button.wp-block-search__button:hover {
   background-color: transparent;
-  border-color: currentColor;
-  color: inherit;
+  border-color: #4342A4;
+  color: #4342A4;
+}
+.wp-block-search .wp-block-search__button.wp-block-search__button:active {
+  background-color: transparent;
+  border-color: #4342A4;
+  color: #4342A4;
 }
 .wp-block-search .wp-block-search__button.wp-block-search__button:focus {
   outline-offset: -6px;
@@ -2070,27 +2113,27 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-separator {
-  border-bottom: 1px solid #000F08;
+  border-bottom: 1px solid #BB6925;
   clear: both;
   opacity: 1;
 }
 
 hr {
-  border-bottom: 1px solid #000F08;
+  border-bottom: 1px solid #BB6925;
   clear: both;
   opacity: 1;
 }
 .wp-block-separator[style*="text-align:right"] {
-  border-right-color: #000F08;
+  border-right-color: #BB6925;
 }
 .wp-block-separator[style*="text-align: right"] {
-  border-right-color: #000F08;
+  border-right-color: #BB6925;
 }
 hr[style*="text-align:right"] {
-  border-right-color: #000F08;
+  border-right-color: #BB6925;
 }
 hr[style*="text-align: right"] {
-  border-right-color: #000F08;
+  border-right-color: #BB6925;
 }
 .wp-block-separator:not(.is-style-dots) {
   max-width: calc(100vw - 30px);
@@ -2144,10 +2187,10 @@ hr.is-style-dots.has-text-color:before {
   color: currentColor !important;
 }
 .wp-block-separator.is-style-dots:before {
-  color: #000F08;
+  color: #BB6925;
 }
 hr.is-style-dots:before {
-  color: #000F08;
+  color: #BB6925;
 }
 .has-background .wp-block-separator, [class*=background-color] .wp-block-separator, [style*=background-color] .wp-block-separator, .wp-block-cover[style*=background-image] .wp-block-separator,
 .has-background hr,
